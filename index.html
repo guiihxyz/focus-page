@@ -19,17 +19,22 @@
                 <a href="/">
                     <img src="src/images/main-logo.png" alt="Logo Focus" class="h-10">
                 </a>
-                <div class="hidden 2xl:block">
-                    <ul class="flex gap-2">
-                        <li class="text-[#9F9BA6] font-medium base-button hover:bg-zinc-300/5 cursor-pointer transition-colors">Área do Cliente</li>
-                        <li class="text-[#9F9BA6] font-medium base-button hover:bg-zinc-300/5 cursor-pointer transition-colors">Suporte</li>
-                        <li class="text-[#9F9BA6] font-medium base-button hover:bg-zinc-300/5 cursor-pointer transition-colors">HelpDesk</li>
+                <div class="2xl:hidden">
+                    <button type="button" class="text-[#9F9BA6] base-button hover:bg-zinc-300/5 cursor-pointer transition-colors" id="toggle-menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="hidden 2xl:block" id="menu-list">
+                    <ul class="flex flex-col 2xl:flex-row gap-2">
+                        <li class="text-xs 2xl:text-base text-[#9F9BA6] font-medium base-button hover:bg-zinc-300/5 cursor-pointer transition-colors">Área do Cliente</li>
+                        <li class="text-xs 2xl:text-base text-[#9F9BA6] font-medium base-button hover:bg-zinc-300/5 cursor-pointer transition-colors">Suporte</li>
+                        <li class="text-xs 2xl:text-base text-[#9F9BA6] font-medium base-button hover:bg-zinc-300/5 cursor-pointer transition-colors">HelpDesk</li>
                     </ul>
                 </div>
             </div>
             <div class="hidden xl:flex gap-8">
-                <button class="black-color bg-[#E8E9F3] hover:bg-[#A3A5B8] base-button cursor-pointer transition-colors">Nossos planos</button>
-                <button class="white-color bg-[#250072] hover:bg-[#1D0059] base-button cursor-pointer transition-colors">Solicite agora</button>
+                <a href="#section-plains" class="black-color bg-[#E8E9F3] hover:bg-[#A3A5B8] base-button cursor-pointer transition-colors">Nossos planos</a>
+                <a href="https://api.whatsapp.com/send/?phone=5519989278466&text=Ol%C3%A1+estou+interessado+em+saber+mais+sobre+o+Sistema&type=phone_number&app_absent=0" target="_blank"" class="white-color bg-[#250072] hover:bg-[#1D0059] base-button cursor-pointer transition-colors">Solicite agora</a>
             </div>
         </nav>
     </header>
@@ -45,8 +50,8 @@
                     <p class="md:text-lg font-medium text-[#A3A5B8]">Uma plataforma de gestão de negócios e atividades, ideal para gerenciar finanças, clientes, propostas, serviços e muito mais.</p>
                 </div>
                 <div class="flex gap-3 mt-5">
-                    <button class="black-color bg-[#E8E9F3] hover:bg-[#A3A5B8] base-button-g cursor-pointer transition-colors z-30">Nossos planos</button>
-                    <button class="white-color bg-[#250072] hover:bg-[#1D0059] base-button-g cursor-pointer transition-colors z-30">Solicite agora</button>
+                    <a href="#section-plains" class="black-color bg-[#E8E9F3] hover:bg-[#A3A5B8] base-button-g cursor-pointer transition-colors z-30">Nossos planos</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5519989278466&text=Ol%C3%A1+estou+interessado+em+saber+mais+sobre+o+Sistema&type=phone_number&app_absent=0" target="_blank" class="white-color bg-[#250072] hover:bg-[#1D0059] base-button-g cursor-pointer transition-colors z-30">Solicite agora</a>
                 </div>
             </div>
         </section>
@@ -96,7 +101,7 @@
             </div>
         </section>
 
-        <section class="relative flex flex-col items-center mt-7 p-14">
+        <section class="relative flex flex-col items-center mt-7 p-14" id="section-plains">
             <div class="absolute top-0 left-0 w-screen h-screen pointer-events-none" id="background-plains"></div>
             <div class="hidden xl:block absolute inset-x-0 bottom-[350px] transform-gpu overflow-hidden px-36 blur-3xl opacity-90" aria-hidden="true">
                 <div class="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-sky-950 to-violet-700 opacity-30" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
@@ -496,7 +501,7 @@
                     <p class="md:text-lg font-medium text-[#A3A5B8]">Se você está interessado em saber mais sobre o Focuss App ou solicitar acesso, entre em contato conosco. Estamos prontos para ajudar!</p>
                 </div>
                 <div class="flex justify-center xl:justify-start gap-3 mt-5">
-                    <button class="white-color bg-green-700 hover:bg-green-800 base-button-g cursor-pointer transition-colors z-30"><i class="fa-brands fa-whatsapp mr-2"></i>Whatsapp</button>
+                    <a href="https://api.whatsapp.com/send/?phone=5519989278466&text=Ol%C3%A1+estou+interessado+em+saber+mais+sobre+o+Sistema&type=phone_number&app_absent=0" target="_blank" class="white-color bg-green-700 hover:bg-green-800 base-button-g cursor-pointer transition-colors z-30"><i class="fa-brands fa-whatsapp mr-2"></i>Whatsapp</a>
                 </div>
             </div>
             <div class="hidden xl:block">

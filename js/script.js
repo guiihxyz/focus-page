@@ -1,6 +1,10 @@
 "use strict"
 
 $(document).ready(function() {
+    $('#toggle-menu').on('click', function () {
+        $('#menu-list').slideToggle(300)
+    })
+
     $('.theme-select').click(function() {
         var newImage = $(this).data('file')
         $('#preview-theme').attr('src', newImage)
