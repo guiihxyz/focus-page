@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Tecnologia</title>
+    <link rel="shortcut icon" href="src/images/ICON COLOR.png" type="image/x-icon">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased">
+    <header class="fixed top-0 left-0 w-full border-b border-b-[#1C1921] backdrop-blur-md z-40 transition-opacity" style="background-color: rgba(5, 1, 13, 0.50);">
+        <nav class="flex justify-center xl:justify-between items-center xl:px-80 py-3">
+            <div class="flex items-center gap-16">
+                <a href="/">
+                    <img src="src/images/main-logo.png" alt="Logo Focus" class="h-10">
+                </a>
+                <div class="hidden 2xl:block">
+                    <ul class="flex gap-2">
+                        <li class="text-[#9F9BA6] font-medium base-button hover:bg-zinc-300/5 cursor-pointer transition-colors">Área do Cliente</li>
+                        <li class="text-[#9F9BA6] font-medium base-button hover:bg-zinc-300/5 cursor-pointer transition-colors">Suporte</li>
+                        <li class="text-[#9F9BA6] font-medium base-button hover:bg-zinc-300/5 cursor-pointer transition-colors">HelpDesk</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden xl:flex gap-8">
+                <button class="black-color bg-[#E8E9F3] hover:bg-[#A3A5B8] base-button cursor-pointer transition-colors">Nossos planos</button>
+                <button class="white-color bg-[#250072] hover:bg-[#1D0059] base-button cursor-pointer transition-colors">Solicite agora</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="overflow-hidden bg-[#05010D]"> 
+        <section class="relative h-screen">
+            <div class="w-screen h-screen absolute top-0 left-0" id="square-content"></div>
+            <div class="absolute -bottom-[1000px] -left-[550px] w-[1500px] h-[1500px] rounded-full bg-gradient-to-b from-[#6b23ff] blur-3xl opacity-20 z-30 pointer-events-none"></div>
+            <div class="absolute -top-[250px] -right-[550px] w-[1000px] h-[1000px] rounded-full bg-gradient-to-b from-[#BC9BFF] blur-3xl opacity-10 z-30 pointer-events-none"></div>
+            <div class="h-full flex flex-col justify-center items-center text-center lg:px-80">
+                <h1 class="text-4xl md:text-5xl xl:text-6xl font-semibold white-color z-20">Focus Tecnologia</h1>
+                <div class="text-md max-w-[400px] md:max-w-[640px] mt-0.5 z-20">
+                    <p class="md:text-lg font-medium text-[#A3A5B8]">Uma plataforma de gestão de negócios e atividades, ideal para gerenciar finanças, clientes, propostas, serviços e muito mais.</p>
+                </div>
+                <div class="flex gap-3 mt-5">
+                    <button class="black-color bg-[#E8E9F3] hover:bg-[#A3A5B8] base-button-g cursor-pointer transition-colors z-30">Nossos planos</button>
+                    <button class="white-color bg-[#250072] hover:bg-[#1D0059] base-button-g cursor-pointer transition-colors z-30">Solicite agora</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative -mt-48 z-20">
+            <div class="flex flex-col justify-center items-center gap-4 px-8">
+                <h2 class="white-color text-2xl sm:text-3xl md:text-4xl text-center font-semibold">Encontre o visual ideal para você.</h2>
+                <ul class="flex gap-8 -mt-1">
+                    <li class="w-[120px] text-[#9F9BA6] text-center font-medium base-button bg-zinc-300/5 cursor-pointer scale-90 sm:scale-100 transition-colors theme-select" data-file="src/images/themes/dashboard-theme-bussines.png"><i class="fa-solid fa-briefcase mr-2"></i>Bussines</li>
+                    <li class="w-[120px] text-[#9F9BA6] text-center font-medium base-button hover:bg-zinc-300/5 cursor-pointer scale-90 sm:scale-100 transition-colors theme-select" data-file="src/images/themes/dashboard-theme-dark.png"><i class="fa-solid fa-moon mr-2"></i>Dark</li>
+                    <li class="w-[120px] text-[#9F9BA6] text-center font-medium base-button hover:bg-zinc-300/5 cursor-pointer scale-90 sm:scale-100 transition-colors theme-select" data-file="src/images/themes/dashboard-theme-light.png"><i class="fa-solid fa-sun mr-2"></i>Light</li>
+                </ul>
+                <div>
+                    <img src="src/images/themes/dashboard-theme-bussines.png" alt="Demonstração do tema" class="w-[1200px] rounded-xl" id="preview-theme">
+                </div>
+            </div>
+        </section>
+
+        <section class="relative mt-20">
+            <div class="absolute -bottom-[1100px] -right-[900px] w-[1500px] h-[1500px] rounded-full bg-gradient-to-b from-[#62547E] blur-3xl opacity-10 z-30 pointer-events-none"></div>
+            <div class="text-center relative z-10">
+                <h2 class="white-color text-2xl sm:text-3xl md:text-4xl text-center font-semibold">Prezamos pela sua qualidade.</h2>
+                <p class="font-medium text-[#A3A5B8] mt-0.5">Nossas principais características são:</p>
+            </div>
+            <div class="flex justify-center flex-wrap gap-8 mt-10 z-20">
+                <div class="w-[300px] flex flex-col items-center gap-6 bg-[#05020A] rounded-xl p-8 shadow-violet-950/20 hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                    <img src="src/images/cards/seta-dupla.png" alt="Imagem de flexibilidade" class="w-1/2">
+                    <div class="text-center mt-0.5">
+                        <h3 class="white-color text-lg font-semibold">Flexibilidade Total</h3>
+                        <p class="text-sm font-medium text-[#A3A5B8] mt-0.5">O Focuss App oferece total <strong>flexibilidade</strong> para você gerenciar seu negócio de maneira personalizada e adaptável às suas necessidades.</p>
+                    </div>
+                </div>
+                <div class="w-[300px] flex flex-col items-center gap-6 bg-[#05020A] rounded-xl p-8 shadow-violet-950/20 hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                    <img src="src/images/cards/solucao.png" alt="Imagem de flexibilidade" class="w-1/2">
+                    <div class="text-center mt-0.5">
+                        <h3 class="white-color text-lg font-semibold">Soluções Confiáveis</h3>
+                        <p class="text-sm font-medium text-[#A3A5B8] mt-0.5">Embora seja um sistema recente, o Focuss App já conquistou a confiança de diversos clientes, oferecendo uma <strong>plataforma segura</strong> e eficiente para gestão de negócios.</p>
+                    </div>
+                </div>
+                <div class="w-[300px] flex flex-col items-center gap-6 bg-[#05020A] rounded-xl p-8 shadow-violet-950/20 hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                    <img src="src/images/cards/personalizacao.png" alt="Imagem de flexibilidade" class="w-1/2">
+                    <div class="text-center mt-0.5">
+                        <h3 class="white-color text-lg font-semibold">Personalização</h3>
+                        <p class="text-sm font-medium text-[#A3A5B8] mt-0.5">Com o Focuss App, você tem a <strong>liberdade de customizar</strong> funcionalidades e interfaces, garantindo que o sistema atenda exatamente às suas necessidades.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative flex flex-col items-center mt-7 p-14">
+            <div class="absolute top-0 left-0 w-screen h-screen pointer-events-none" id="background-plains"></div>
+            <div class="hidden xl:block absolute inset-x-0 bottom-[350px] transform-gpu overflow-hidden px-36 blur-3xl opacity-90" aria-hidden="true">
+                <div class="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-sky-950 to-violet-700 opacity-30" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+            <div class="text-center relative z-20">
+                <h2 class="white-color text-2xl sm:text-3xl md:text-4xl text-center font-semibold">Escolha o plano ideal para você.</h2>
+                <p class="font-medium text-[#A3A5B8] mt-0.5">Encontre a opção perfeita que se encaixa no seu orçamento e atenda às suas necessidades.</p>
+            </div>
+            <div class="relative z-20 mt-14">
+                <div class="flex flex-wrap xl:flex-nowrap justify-center">
+                    <div class="w-[270px] 2xl:w-[330px] hidden xl:block"></div>
+                    <div class="w-[270px] 2xl:w-[330px] pt-10 px-6 pb-16">
+                        <div class="mb-3">
+                            <span class="white-color font-semibold text-left">Starter</span>
+                        </div>
+                        <div class="flex items-end gap-1">
+                            <p class="white-color text-4xl 2xl:text-5xl font-semibold">R$ 50,00</p>
+                            <p class="white-color font-normal mb-1">/mês</p>
+                        </div>
+                        <a href="#" class="block w-full text-center white-color bg-[#250072] hover:bg-[#1D0059] base-button-g cursor-pointer mt-8 transition-colors">Solicite agora</a>
+                    </div>
+                    
+                    <div class="w-[270px] 2xl:w-[330px] pt-10 px-6 pb-16">
+                        <div class="mb-3">
+                            <span class="white-color font-semibold text-left">Professional</span>
+                        </div>
+                        <div class="flex items-end gap-1">
+                            <p class="white-color text-4xl 2xl:text-5xl font-semibold">R$ 100,00</p>
+                            <p class="white-color font-normal mb-1">/mês</p>
+                        </div>
+                        <a href="#" class="block w-full text-center white-color bg-[#250072] hover:bg-[#1D0059] base-button-g cursor-pointer mt-8 transition-colors">Solicite agora</a>
+                    </div>
+
+                    <div class="w-[270px] 2xl:w-[330px] pt-10 px-6 pb-16 rounded-b-lg 2xl:rounded-b-0 rounded-t-lg bg-[#05010d81] border 2xl:border-b-0 border-[#1C1921]">
+                        <div class="mb-3">
+                            <span class="white-color font-semibold text-left mr-3">Business</span>
+                            <span class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-[#E3DAF5] text-[#250072]">Mais popular</span>
+                        </div>
+                        <div class="flex items-end gap-1">
+                            <p class="white-color text-4xl 2xl:text-5xl font-semibold">R$ 200,00</p>
+                            <p class="white-color font-normal mb-1">/mês</p>
+                        </div>
+                        <a href="#" class="block w-full text-center white-color bg-[#250072] hover:bg-[#1D0059] base-button-g cursor-pointer mt-8 transition-colors">Solicite agora</a>
+                    </div>
+
+                    <div class="w-[270px] 2xl:w-[330px] pt-10 px-6 pb-16">
+                        <div class="mb-3">
+                            <span class="white-color font-semibold text-left">Enterprise</span>
+                        </div>
+                        <div class="flex items-end gap-1">
+                            <p class="white-color text-4xl 2xl:text-5xl font-semibold">R$ 400,00</p>
+                            <p class="white-color font-normal mb-1">/mês</p>
+                        </div>
+                        <a href="#" class="block w-full text-center white-color bg-[#250072] hover:bg-[#1D0059] base-button-g cursor-pointer mt-8 transition-colors">Solicite agora</a>
+                    </div>
+                </div>
+                <table class="border-separate border-spacing-0 hidden xl:block">
+                    <tbody>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color rounded-tl-lg font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Usuários</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">2</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">5</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">10 (R$ 20 extra)</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] rounded-tr-lg font-normal text-center px-6 py-3 border border-b-0 border-[#1C1921]">20 (R$ 15 extra)</td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Suporte</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">HelpDesk</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">HelpDesk + Whatsapp (apenas emergências)</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">HelpDesk + Whatsapp (horário comercial)</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-b-0 border-[#1C1921]">HelpDesk + Whatsapp prioritário (até as 20h)</td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Cadastro de clientes</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Cadastro de contas bancárias e categorias financeiras</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Registro de serviços (com lançamento automático no contas a receber)</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Contas a pagar e receber</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Relatórios financeiros básicos</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Propostas digitais (com acompanhamento de status)</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Módulo de vendas completo</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Cadastro de produtos</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Relatórios financeiros avançados</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Relatório de vendas comerciais</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Monitoramento de logs</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Integração com domínio próprio (opcional, custo adicional)</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 bg-[#05010d81] border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-b-0 border-[#1C1921]">-</td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Módulo de PDV</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Cadastro de fornecedores</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Estrutura mercadológica</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Módulo de compras de produtos</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Personalização do layout e design</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Email personalizado</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Integração com domínio próprio incluída</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 bg-[#05010d81] border border-b-0 border-r-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Acesso a módulos personalizados conforme a necessidade da empresa</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 bg-[#05010d81] border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">API para integração com outros sistemas</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 bg-[#05010d81] border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Painel de BI personalizado (dashboard com métricas exclusivas)</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 bg-[#05010d81] border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Gestão de equipes e permissões avançadas</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 bg-[#05010d81] border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Treinamento e implantação assistida</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 bg-[#05010d81] border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color font-medium text-left px-6 py-3 border border-b-0 border-r-0 border-[#1C1921]">Onboarding personalizado para novos usuários</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 bg-[#05010d81] border border-r-0 border-b-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 px-6 py-3 border border-b-0 border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="w-[270px] 2xl:w-[330px] white-color rounded-bl-lg font-medium text-left px-6 py-3 border border-r-0 border-[#1C1921]">Prioridade no suporte e atualizações</th>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 border border-r-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-[#bdbec5] font-normal text-center px-6 py-3 bg-[#05010d81] border border-r-0 border-[#1C1921]">-</td>
+                            <td class="w-[270px] 2xl:w-[330px] text-green-500 rounded-br-lg px-6 py-3 border border-[#1C1921]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-[20px] h-[20px] mx-auto"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"></path></svg>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="relative flex flex-col items-center">
+            <div class="absolute -bottom-[1200px] -right-[400px] w-[1500px] h-[1500px] rounded-full bg-gradient-to-b from-[#250072] blur-3xl opacity-10 z-30 pointer-events-none"></div>
+            <div class="text-center relative z-10">
+                <h2 class="white-color text-2xl sm:text-3xl md:text-4xl text-center font-semibold">Acesse o nosso sistema.</h2>
+                <p class="font-medium text-[#A3A5B8] mt-0.5">Conecte-se com sua conta e aproveite.</p>
+                <div class="mt-5">
+                    <a href="https://focuss.tech/login" target="_blank" class="inline-block text-center white-color bg-[#250072] hover:bg-[#1D0059] base-button-g cursor-pointer transition-colors">Faça login</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative flex justify-center xl:justify-between items-center gap-12 px-60 my-14">
+            <div class="text-center xl:text-left">
+                <h1 class="text-4xl md:text-5xl xl:text-6xl font-semibold white-color z-20">Entre em Contato</h1>
+                <div class="text-md max-w-[400px] md:max-w-[640px] mt-0.5 z-20">
+                    <p class="md:text-lg font-medium text-[#A3A5B8]">Se você está interessado em saber mais sobre o Focuss App ou solicitar acesso, entre em contato conosco. Estamos prontos para ajudar!</p>
+                </div>
+                <div class="flex justify-center xl:justify-start gap-3 mt-5">
+                    <button class="white-color bg-green-700 hover:bg-green-800 base-button-g cursor-pointer transition-colors z-30"><i class="fa-brands fa-whatsapp mr-2"></i>Whatsapp</button>
+                </div>
+            </div>
+            <div class="hidden xl:block">
+                <img src="src/images/contact-image.png" alt="Imagem de contato" class="w-[620px]">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black white-color py-12 z-30">
+        <div class="container mx-auto px-6 lg:px-16">
+            <div class="flex flex-col lg:flex-row justify-between items-center text-sm border-b border-[#1C1921] pb-6 mb-6">
+                <p class="mb-4 lg:mb-0 text-[#A3A5B8]">
+                    Nós protegemos seus dados. <a href="#" class="text-[#5100F6] underline">Saiba mais sobre segurança</a>.
+                </p>
+                <div class="flex items-center space-x-6 text-[#A3A5B8]">
+                    <span>✔ SOC2 Tipo 2 Certificado</span>
+                    <span>✔ Conformidade com HIPAA</span>
+                </div>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div>
+                    <h1 class="text-2xl font-semibold mb-4">Focus Tecnologia</h1>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-[#A3A5B8] white-color-hover"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" class="text-[#A3A5B8] white-color-hover"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-[#A3A5B8] white-color-hover"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="text-[#A3A5B8] white-color-hover"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+    
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">Produto</h2>
+                    <ul class="space-y-2 text-[#A3A5B8]">
+                        <li><a href="#" class="white-color-hover">Gestão</a></li>
+                        <li><a href="#" class="white-color-hover">Finanças</a></li>
+                        <li><a href="#" class="white-color-hover">Clientes</a></li>
+                        <li><a href="#" class="white-color-hover">Propostas</a></li>
+                        <li><a href="#" class="white-color-hover">Serviços</a></li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">Recursos</h2>
+                    <ul class="space-y-2 text-[#A3A5B8]">
+                        <li><a href="#" class="white-color-hover">Suporte</a></li>
+                        <li><a href="#" class="white-color-hover">Status do Sistema</a></li>
+                        <li><a href="#" class="white-color-hover">Integrações</a></li>
+                        <li><a href="#" class="white-color-hover">Segurança e Conformidade</a></li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">Desenvolvedores</h2>
+                    <ul class="space-y-2 text-[#A3A5B8]">
+                        <li><a href="#" class="white-color-hover">Documentação</a></li>
+                        <li><a href="#" class="white-color-hover">API</a></li>
+                        <li><a href="#" class="white-color-hover">Open Source</a></li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">Empresa</h2>
+                    <ul class="space-y-2 text-[#A3A5B8]">
+                        <li><a href="#" class="white-color-hover">Sobre nós</a></li>
+                        <li><a href="#" class="white-color-hover">Carreiras</a></li>
+                        <li><a href="#" class="white-color-hover">Política de Privacidade</a></li>
+                        <li><a href="#" class="white-color-hover">Termos de Serviço</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-sm text-[#A3A5B8]">
+                <p>&copy; 2025 Focus Tecnologia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

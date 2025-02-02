@@ -1,0 +1,69 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*:not(i) {
+    font-family: "Inter", sans-serif !important;
+}
+
+*::selection {
+    background: #4601d1;
+    color: #fff;
+}
+*::-moz-selection {
+    background: #4601d1;
+    color: #fff;
+}
+
+.base-button {
+    letter-spacing: 0;
+    border-radius: 0.625rem;
+    padding: .375rem .75rem;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.base-button-g {
+    letter-spacing: 0;
+    border-radius: 0.625rem;
+    padding: .375rem 1.5rem;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.black-color {
+    color: #020005;
+}
+
+.white-color {
+    color: #E8E9F3;
+}
+
+.white-color-hover:hover {
+    color: #E8E9F3;
+}
+
+.black-bg {
+    background-color: #020005;
+}
+
+.white-bg {
+    background-color: #E8E9F3;
+}
+
+#square-content {
+    background-image: 
+    repeating-linear-gradient(0deg, #1C1921 0px, #1C1921 1px, transparent 1px, transparent 50px),
+    repeating-linear-gradient(90deg, #1C1921 0px, #1C1921 1px, transparent 1px, transparent 50px);
+    background-size: 50px 50px;
+    background-position: center;
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 90%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 90%);
+}
+
+#background-plains {
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='383' height='46' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%231C1921' stroke-width='8.1' stroke-opacity='0.32'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 90%);
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 90%);
+}
